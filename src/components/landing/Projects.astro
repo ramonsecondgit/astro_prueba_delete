@@ -1,0 +1,23 @@
+---
+import projects from '../../config/projects.json'
+---
+
+<section class="my-4 bg-zinc-500 ">
+    <h1 class="text-5xl font-bold">Projects</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+        {
+            projects.map(project => (
+                <div class=" p-4 bg-green-300 rounded-2xl text-black">
+                    <h2 class="text-1xl">Project title: <span class="text-2xl font-bold">{project.title}</span></h2>
+                    <img src={project.imagen} alt="" class="my-2 shadow-xl/20">
+                    <p class="text-cyan-800 text-justify md:text-left">
+                        {project.description}
+                    </p>
+                </div>
+            ))
+        }
+    </div>
+
+
+</section>
